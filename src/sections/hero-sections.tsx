@@ -54,7 +54,7 @@ export function HeroSection() {
                     animate={{ y: 0, opacity: 1 }}
                     transition={{ delay: 0.2, type: "spring", stiffness: 300, damping: 30 }}
                 >
-                    33rd International Conference on Telecommunications. Uniting global network researchers, 6G architects, and optical engineers in Thessaloniki, Greece.
+                    33rd International Conference on Telecommunications. Uniting global network researchers, 6G architects, and optical engineers in Casablanca, Morocco.
                 </motion.p>
 
                 {/* Call to Action Buttons */}
