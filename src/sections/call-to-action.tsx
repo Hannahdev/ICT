@@ -1,8 +1,5 @@
-import { MoveRight, Calendar, MapPin, Sparkles } from "lucide-react";
+import { MoveRight } from "lucide-react";
 import { motion } from "framer-motion";
-import galleryImage1 from "../assets/galleryImage1.png";
-import galleryImage2 from "../assets/galleryImage2.png";
-import galleryImage3 from "../assets/galleryImage3.png";
 
 export function CallToAction() {
   return (
@@ -23,7 +20,7 @@ export function CallToAction() {
         >
           {/* Left Floating Image */}
           <motion.img 
-            src="public/casablanca-4-tw14m4.jpg" 
+            src="/casablanca-4-tw14m4.jpg" 
             alt="ICT Conference Workshop" 
             variants={{
               rest: { x: -70, y: 10, rotate: -12, scale: 0.95 },
@@ -35,7 +32,7 @@ export function CallToAction() {
 
           {/* Right Floating Image */}
           <motion.img 
-            src="public/hassan-2-mosque-casablanca-01-L.jpg" 
+            src="/hassan-2-mosque-casablanca-01-L.jpg" 
             alt="ICT Keynote Speaker" 
             variants={{
               rest: { x: 70, y: 10, rotate: 12, scale: 0.95 },
@@ -47,7 +44,7 @@ export function CallToAction() {
 
           {/* Center Main Featured Image */}
           <motion.img 
-            src="public/casablanca-4-tw14m4.jpg" 
+            src="/casablanca-4-tw14m4.jpg" 
             alt="ICT Innovation Competition" 
             variants={{
               rest: { y: -5, scale: 1 },

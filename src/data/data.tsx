@@ -1,4 +1,4 @@
-import React from "react";
+import type { ReactNode } from "react";
 import { ShieldCheck, MapPin, Handshake, Landmark, Headset } from "lucide-react";
 import houseImage from "../assets/house.png";
 import galleryImage1 from "../assets/galleryImage1.png";
@@ -7,7 +7,7 @@ import galleryImage3 from "../assets/galleryImage3.png";
 import galleryImage4 from "../assets/galleryImage4.png";
 
 export interface WhyChooseUsItem {
-    icon: React.ReactNode;
+    icon: ReactNode;
     title: string;
     description: string;
     image: string;

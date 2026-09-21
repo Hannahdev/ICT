@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { 
     Compass, 
     Plane, 
     Train, 
-    Passport, 
+    FileCheck, 
     Sun, 
     MapPin, 
     ExternalLink, 
     Camera, 
-    Navigation,
-    Info
+    Navigation
 } from "lucide-react";
 
 interface Place {
@@ -92,7 +91,7 @@ const travelTips = [
         details: "Modern, air-conditioned Tramway lines (T1–T4) and red 'Petit Taxis' offer safe, affordable, and seamless connection to conference venues and hotels."
     },
     {
-        icon: <Passport className="size-5 text-emerald-600" />,
+        icon: <FileCheck className="size-5 text-emerald-600" />,
         title: "Visa & Invitation Letter",
         details: "Many international nationalities enjoy visa-free or Moroccan eVisa entry. Registered ICT 2026 attendees can request official IEEE invitation letters."
     },

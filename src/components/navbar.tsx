@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import { ChevronDown, FileText, Sparkles, Layers, GraduationCap, BookOpen, ExternalLink } from "lucide-react";
+import { useState, useEffect, useRef } from "react";
+import { ChevronDown, FileText, Sparkles, Layers, GraduationCap, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const authorMenuItems = [

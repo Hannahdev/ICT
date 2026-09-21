@@ -9,7 +9,7 @@ export function Footer() {
                     {/* Left Brand Details */}
                     <div className="lg:col-span-7 flex flex-col items-start gap-6">
                         <a href="#" className="select-none">
-                            <img src="/public/logo.png" alt="ICT Conference & Platform" />
+                            <img src="/logo.png" alt="ICT Conference & Platform" />
                         </a>
                         <p className="text-zinc-300 text-sm/5.5 max-w-md">
                             Driving regional digital transformation, AI for network intelligence, and sustainable ICT innovation across research, academia, and industry.
