@@ -149,10 +149,10 @@ export function Stats() {
 
                 </div>
 
-                {/* Right Column: Call For Papers Poster Card */}
-                <div className="lg:col-span-5 flex flex-col gap-8 w-full">
+                {/* Right Column: Full Call For Papers Poster */}
+                <div className="lg:col-span-5 flex flex-col items-center justify-center w-full">
                     <motion.div 
-                        className="relative w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/3] z-10 group bg-slate-900"
+                        className="w-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white bg-slate-900 z-10 hover:shadow-emerald-500/10 transition-shadow duration-300"
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
@@ -160,14 +160,9 @@ export function Stats() {
                     >
                         <img 
                             src="/CALL FOR.png" 
-                            alt="ICT 2026 Call for Papers" 
-                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                            alt="ICT 2027 Call for Papers" 
+                            className="w-full h-auto object-contain block"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-                        <div className="absolute bottom-4 left-5 right-5 text-white">
-                            <span className="text-xs font-semibold uppercase tracking-wider text-emerald-400">Announcement</span>
-                            <p className="text-sm font-bold">Call for Papers & Contributions</p>
-                        </div>
                     </motion.div>
                 </div>
 
