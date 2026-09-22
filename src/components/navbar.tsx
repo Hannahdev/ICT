@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from "react";
-import { ChevronDown, FileText, Sparkles, Layers, GraduationCap, BookOpen } from "lucide-react";
+import { ChevronDown, FileText, Layers, GraduationCap, BookOpen } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const authorMenuItems = [
@@ -12,7 +12,7 @@ const authorMenuItems = [
     {
         title: "Call for Demos and Posters",
         description: "Showcase live software prototypes, testbeds & visual posters",
-        icon: <Sparkles className="size-4 text-emerald-600" />,
+        icon: <FileText className="size-4 text-emerald-600" />,
         href: "#about"
     },
     {
@@ -63,21 +63,18 @@ export function Navbar() {
 
     return (
         <>
-            <nav className={`fixed z-50 flex items-center justify-between left-1/2 -translate-x-1/2 transition-all duration-500 p-3.5 ${
+            <nav className={`fixed z-50 flex items-center justify-between left-1/2 -translate-x-1/2 transition-all duration-500 py-2 px-3.5 ${
                 scrolled 
                     ? "lg:w-5xl w-[calc(100vw-16px)] bg-white/90 backdrop-blur-2xl rounded-full mt-4 pl-6 shadow-lg shadow-slate-900/5 border border-slate-200/90" 
                     : "md:px-16 lg:px-24 xl:px-32 w-full"
             }`}>
                 {/* Brand Logo */}
-                <a href="#home" className="flex items-center gap-2.5 select-none">
-                    <img src="/logo.png" alt="ICT 2026 Logo" className="h-7 w-auto transition-all duration-500" />
-                    <span className="font-bold text-base tracking-tight text-slate-900">
-                        ICT 2026
-                    </span>
+                <a href="#home" className="flex items-center select-none shrink-0">
+                    <img src="/LOGO-removebg-preview (2).png" alt="ICT 2026 Logo" className="h-12 w-auto object-contain transition-all duration-500" />
                 </a>
 
                 {/* Desktop Navigation Links */}
-                <div className="hidden md:flex items-center gap-5 lg:gap-7 text-sm font-semibold">
+                <div className="hidden md:flex items-center gap-4 lg:gap-5 text-sm font-semibold">
                     <a href="#home" className="text-slate-700 hover:text-emerald-600 transition-colors duration-200">
                         Home
                     </a>
@@ -167,8 +164,8 @@ export function Navbar() {
                         Speakers
                     </a>
 
-                    <a href="#travel" className="text-slate-700 hover:text-emerald-600 transition-colors duration-200 flex items-center gap-1">
-                        <span>Venue & Travel</span>
+                    <a href="/venue" className="text-slate-700 hover:text-emerald-600 transition-colors duration-200">
+                        Venue
                     </a>
 
                     <a href="#faq" className="text-slate-700 hover:text-emerald-600 transition-colors duration-200">
@@ -176,7 +173,7 @@ export function Navbar() {
                     </a>
 
                     <a href="#contact" className="text-slate-700 hover:text-emerald-600 transition-colors duration-200">
-                        Get In Touch
+                        Contact
                     </a>
                 </div>
 
@@ -211,9 +208,8 @@ export function Navbar() {
                     <div className="flex flex-col">
                         {/* Drawer Header */}
                         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
-                            <div className="flex items-center gap-2">
-                                <img src="/logo.png" alt="ICT 2026 Logo" className="h-6 w-auto" />
-                                <span className="font-bold text-slate-900">ICT 2026</span>
+                            <div className="flex items-center">
+                                <img src="/LOGO-removebg-preview (2).png" alt="ICT 2026 Logo" className="h-12 w-auto" />
                             </div>
                             <button 
                                 onClick={() => setMobileOpen(false)} 
@@ -259,7 +255,7 @@ export function Navbar() {
 
                             <a href="#tracks" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">Tracks</a>
                             <a href="#speakers" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">Speakers</a>
-                            <a href="#travel" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">Venue & Travel (Casablanca)</a>
+                            <a href="/venue" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">Venue & Travel</a>
                             <a href="#faq" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">FAQ</a>
                             <a href="#contact" onClick={() => setMobileOpen(false)} className="text-slate-800 hover:text-emerald-600 py-1">Get In Touch</a>
                         </div>

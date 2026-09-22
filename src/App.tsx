@@ -6,12 +6,20 @@ import { WhyChooseUs } from "./sections/why-choose-us";
 import { CallToAction } from "./sections/call-to-action";
 import { SpeakersSection } from "./sections/speakers";
 import { OrganizingCommittee } from "./sections/committee";
-import { TravelCasablanca } from "./sections/travel-casablanca";
 import { Contact } from "./sections/contact";
 import { Footer } from "./components/footer";
 import LenisScroll from "./components/lenis-scroll";
+import { VenuePage } from "./VenuePage";
+
+const path = window.location.pathname;
 
 function App() {
+  // Render the venue/travel page at /venue
+  if (path === "/venue") {
+    return <VenuePage />;
+  }
+
+  // Main conference page
   return (
     <>
       <LenisScroll />
@@ -21,8 +29,7 @@ function App() {
       <SpeakersSection />
       <OrganizingCommittee />
       <Gallery />
-      <TravelCasablanca />
-      <WhyChooseUs />  
+      <WhyChooseUs />
       <CallToAction />
       <Contact />
       <Footer />

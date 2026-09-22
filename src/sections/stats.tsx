@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import CountUp from "../components/count-number";
-import { ArrowUpRight, History, Sparkles, Globe2, ChevronDown } from "lucide-react";
+import { ArrowUpRight, History, Globe2, ChevronDown } from "lucide-react";
 
 export function Stats() {
     const [showPastConferences, setShowPastConferences] = useState(false);
@@ -40,7 +40,7 @@ export function Stats() {
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70 }}
                     >
-                        <Sparkles size={14} className="text-emerald-600" />
+                        <Globe2 size={14} className="text-emerald-600" />
                         <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">About ICT 2026</span>
                     </motion.div>
 

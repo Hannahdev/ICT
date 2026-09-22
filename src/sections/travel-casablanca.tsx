@@ -280,16 +280,16 @@ export function TravelCasablanca() {
                             Official Conference Venue
                         </span>
                         <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
-                            Faculty of Sciences Ben M'Sick (FSBM)
+                            Sacré-Cœur, Casablanca
                         </h3>
                         <p className="text-xs sm:text-sm text-slate-300 mt-2 leading-relaxed">
-                            University Hassan II of Casablanca, Boulevard Cdt Driss Harti, Casablanca. Located with rapid access to downtown hotel quarters.
+                            Boulevard de la Résistance, Sacré-Cœur, Casablanca 20100, Morocco. A prestigious central district with direct access to major hotels, transport links, and the city's business heart.
                         </p>
                     </div>
 
                     <div className="relative z-10 flex items-center gap-4">
                         <a 
-                            href="https://maps.google.com/?q=Faculty+of+Sciences+Ben+M'Sick+Casablanca" 
+                            href="https://maps.google.com/?q=Sacré-Cœur+Casablanca+Boulevard+de+la+Résistance+20100" 
                             target="_blank" 
                             rel="noopener noreferrer"
                             className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors duration-200 shadow-lg shadow-emerald-600/30"
