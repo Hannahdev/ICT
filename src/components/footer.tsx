@@ -7,9 +7,13 @@ export function Footer() {
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 pb-16">
 
                     {/* Left Brand Details */}
-                    <div className="lg:col-span-7 flex flex-col items-start gap-6">
-                        <a href="#" className="select-none">
-                            <img src="/LOGO-removebg-preview (2).png" alt="ICT Conference & Platform" className="h-10 w-auto" />
+                    <div className="lg:col-span-6 flex flex-col items-start gap-6">
+                        <a href="#" className="select-none inline-block">
+                            <img 
+                                src="/Gemini_Generated_Image_gozqi2gozqi2gozq-removebg-preview.png" 
+                                alt="ICT Conference & Platform" 
+                                className="h-24 sm:h-28 md:h-32 w-auto object-contain transition-transform duration-300 hover:scale-105" 
+                            />
                         </a>
                         <p className="text-zinc-300 text-sm/5.5 max-w-md">
                             Driving regional digital transformation, AI for network intelligence, and sustainable ICT innovation across research, academia, and industry.
@@ -17,7 +21,7 @@ export function Footer() {
                     </div>
 
                     {/* Right Link Columns */}
-                    <div className="lg:col-span-5 flex justify-between gap-8 flex-wrap">
+                    <div className="lg:col-span-6 flex justify-between gap-8 flex-wrap">
                         {/* Program */}
                         <div className="flex flex-col gap-5">
                             <span className="text-white text-sm font-bold tracking-wider">Program</span>
@@ -54,7 +58,7 @@ export function Footer() {
                                 >
                                     Workshops
                                 </motion.a>
-                                <motion.a href="#travel" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="/venue" className="hover:text-white transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}

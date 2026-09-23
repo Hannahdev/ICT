@@ -1,202 +1,131 @@
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Mail } from "lucide-react";
+import { motion } from "framer-motion";
 
 interface CommitteeMember {
-    id: number;
     name: string;
     role: string;
-    category: "General Chairs" | "TPC Chairs" | "Local Organization" | "Steering Committee";
-    institution: string;
-    location: string;
-    email?: string;
+    image: string;
+    linkedin: string;
 }
 
 const committeeMembers: CommitteeMember[] = [
     {
-        id: 1,
-        name: "Prof. Mohamed Ben Ahmed",
-        role: "General Conference Chair",
-        category: "General Chairs",
-        institution: "Faculty of Sciences Ben M'Sick, Casablanca",
-        location: "Morocco",
-        email: "m.benahmed@univh2c.ma"
+        name: "Donald Jackman",
+        role: "Founder & CEO",
+        image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+        linkedin: "https://linkedin.com"
     },
     {
-        id: 2,
-        name: "Prof. Elena Vasquez",
-        role: "General Co-Chair",
-        category: "General Chairs",
-        institution: "Technical University of Madrid",
-        location: "Spain",
-        email: "e.vasquez@upm.es"
+        name: "Michael Brown",
+        role: "Head of Engineering",
+        image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
+        linkedin: "https://linkedin.com"
     },
     {
-        id: 3,
-        name: "Prof. Tariq Al-Mansoor",
-        role: "TPC Chair",
-        category: "TPC Chairs",
-        institution: "King Fahd University of Petroleum & Minerals",
-        location: "Saudi Arabia",
-        email: "t.mansoor@kfupm.edu.sa"
+        name: "David Thompson",
+        role: "Full-Stack Developer",
+        image: "https://randomuser.me/api/portraits/men/75.jpg",
+        linkedin: "https://linkedin.com"
     },
     {
-        id: 4,
-        name: "Dr. Sophie Laurent",
-        role: "TPC Co-Chair — AI & Networks",
-        category: "TPC Chairs",
-        institution: "CNRS & Telecom Paris",
-        location: "France",
-        email: "s.laurent@telecom-paris.fr"
+        name: "Olivia Martinez",
+        role: "Product Designer",
+        image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=200&h=200&auto=format&fit=crop",
+        linkedin: "https://linkedin.com"
     },
     {
-        id: 5,
-        name: "Prof. Rachid Oulad",
-        role: "Organizing Committee Chair",
-        category: "Local Organization",
-        institution: "University Hassan II of Casablanca",
-        location: "Morocco",
-        email: "r.oulad@univh2c.ma"
+        name: "Liam Anderson",
+        role: "Backend Developer",
+        image: "https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?w=200&auto=format&fit=crop&q=60",
+        linkedin: "https://linkedin.com"
     },
     {
-        id: 6,
-        name: "Dr. Kenza Bouzid",
-        role: "Publicity & Media Chair",
-        category: "Local Organization",
-        institution: "National School of Applied Sciences (ENSA)",
-        location: "Morocco",
-        email: "k.bouzid@ensa.ac.ma"
-    },
-    {
-        id: 7,
-        name: "Prof. Hiroshi Tanaka",
-        role: "Steering Committee Member",
-        category: "Steering Committee",
-        institution: "Tokyo Institute of Technology",
-        location: "Japan",
-        email: "tanaka.h@titech.ac.jp"
-    },
-    {
-        id: 8,
-        name: "Prof. Dimitrios Katsaros",
-        role: "Steering Committee Member",
-        category: "Steering Committee",
-        institution: "University of Thessaly",
-        location: "Greece",
-        email: "dkatsar@uth.gr"
+        name: "Jordan Lee",
+        role: "Marketing Lead",
+        image: "https://images.unsplash.com/photo-1527980965255-d3b416303d12?w=200&auto=format&fit=crop&q=60",
+        linkedin: "https://linkedin.com"
     }
 ];
 
-const categories = ["All", "General Chairs", "TPC Chairs", "Local Organization", "Steering Committee"] as const;
-
 export function OrganizingCommittee() {
-    const [selectedCategory, setSelectedCategory] = useState<string>("All");
-
-    const filteredMembers = selectedCategory === "All"
-        ? committeeMembers
-        : committeeMembers.filter(m => m.category === selectedCategory);
-
     return (
-        <section id="committee" className="py-20 md:py-28 px-4 md:px-16 lg:px-24 xl:px-32 w-full bg-white border-t border-slate-200/80">
-            <div className="max-w-5xl mx-auto">
-
-                {/* Header */}
-                <motion.div
-                    className="mb-10"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.4 }}
-                >
-                    <p className="text-xs font-bold text-emerald-600 uppercase tracking-widest mb-2">Leadership & Governance</p>
-                    <h2 className="text-3xl sm:text-4xl font-bold text-slate-900 tracking-tight">
-                        Organizing Committee
-                    </h2>
-                    <p className="text-slate-500 text-sm mt-3 max-w-xl leading-relaxed">
-                        Chairs, academics, and technical program leaders steering the scientific rigor and organization of ICT 2026.
-                    </p>
-                </motion.div>
-
-                {/* Category Filter */}
-                <div className="flex items-center gap-2 flex-wrap mb-8">
-                    {categories.map((cat) => {
-                        const isActive = selectedCategory === cat;
-                        return (
-                            <button
-                                key={cat}
-                                onClick={() => setSelectedCategory(cat)}
-                                className={`px-4 py-1.5 rounded-full text-xs font-semibold transition-all duration-200 cursor-pointer ${
-                                    isActive
-                                        ? "bg-slate-900 text-white"
-                                        : "bg-slate-100 text-slate-600 hover:bg-slate-200"
-                                }`}
-                            >
-                                {cat}
-                            </button>
-                        );
-                    })}
-                </div>
-
-                {/* Members Table */}
-                <AnimatePresence mode="wait">
+        <>
+            <style>{`
+                @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+            
+                #committee, #committee * {
+                    font-family: 'Poppins', sans-serif;
+                }
+            `}</style>
+            
+            <section id="committee" className="py-20 md:py-28 px-4 md:px-16 lg:px-24 xl:px-32 w-full bg-white border-t border-slate-200/80">
+                <div className="max-w-4xl mx-auto">
                     <motion.div
-                        key={selectedCategory}
-                        initial={{ opacity: 0, y: 8 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        exit={{ opacity: 0 }}
-                        transition={{ duration: 0.2 }}
-                        className="border border-slate-200 rounded-2xl overflow-hidden"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
                     >
-                        {filteredMembers.map((member, idx) => (
-                            <div
-                                key={member.id}
-                                className={`flex flex-col sm:flex-row sm:items-center justify-between gap-3 px-5 py-4 ${
-                                    idx !== filteredMembers.length - 1 ? "border-b border-slate-100" : ""
-                                } ${idx % 2 === 0 ? "bg-white" : "bg-slate-50/50"} hover:bg-emerald-50/30 transition-colors`}
-                            >
-                                <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-6 flex-1">
-                                    <div className="min-w-[200px]">
-                                        <p className="text-sm font-semibold text-slate-900">{member.name}</p>
-                                        <p className="text-xs text-emerald-700 font-medium mt-0.5">{member.role}</p>
-                                    </div>
-                                    <div className="flex flex-col">
-                                        <p className="text-xs text-slate-600">{member.institution}</p>
-                                        <p className="text-xs text-slate-400 mt-0.5">{member.location}</p>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-3 shrink-0">
-                                    <span className="hidden sm:block text-[11px] font-medium text-slate-400 bg-slate-100 px-2.5 py-1 rounded-full whitespace-nowrap">
-                                        {member.category}
-                                    </span>
-                                    {member.email && (
-                                        <a
-                                            href={`mailto:${member.email}`}
-                                            title={`Contact ${member.name}`}
-                                            className="text-slate-400 hover:text-emerald-600 transition-colors"
-                                        >
-                                            <Mail className="size-4" />
-                                        </a>
-                                    )}
-                                </div>
-                            </div>
-                        ))}
+                        <h2 className="text-3xl font-medium text-slate-800 text-center mx-auto">
+                            Meet Our Team
+                        </h2>
+                        <p className="text-sm text-slate-500 text-center mt-2 max-w-xl mx-auto">
+                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.
+                        </p>
                     </motion.div>
-                </AnimatePresence>
 
-                {/* Footer callout */}
-                <div className="mt-8 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-6 border-t border-slate-100">
-                    <p className="text-sm text-slate-500">
-                        <span className="font-semibold text-slate-900">40+ global committee members</span> from 18+ countries & institutes.
-                    </p>
-                    <a
-                        href="#contact"
-                        className="text-xs font-semibold px-5 py-2.5 rounded-full bg-slate-900 text-white hover:bg-emerald-600 transition-colors"
-                    >
-                        Apply as TPC Reviewer
-                    </a>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-16 md:gap-24 mt-12">
+                        {committeeMembers.map((member, index) => (
+                            <motion.div
+                                key={index}
+                                className="flex flex-col items-center"
+                                initial={{ opacity: 0, y: 24 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.4, delay: index * 0.08 }}
+                            >
+                                <img
+                                    src={member.image}
+                                    alt={member.name}
+                                    className="size-20 aspect-square rounded-full object-cover shadow-sm ring-2 ring-emerald-500/10"
+                                />
+                                <h3 className="text-lg font-medium text-slate-700 text-center mt-2">
+                                    {member.name}
+                                </h3>
+                                <p className="text-sm text-emerald-600 text-center">
+                                    {member.role}
+                                </p>
+                                <div className="flex items-center gap-2 text-slate-400 mt-2">
+                                    <a
+                                        href={member.linkedin}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        aria-label={`${member.name} LinkedIn`}
+                                        className="hover:-translate-y-0.5 hover:text-emerald-600 transition-all p-1"
+                                    >
+                                        <svg
+                                            width="20"
+                                            height="20"
+                                            viewBox="0 0 20 20"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M13.332 6.667a5 5 0 0 1 5 5V17.5h-3.333v-5.834a1.667 1.667 0 0 0-3.334 0V17.5H8.332v-5.834a5 5 0 0 1 5-5M5.001 7.5H1.668v10h3.333zM3.335 5a1.667 1.667 0 1 0 0-3.333 1.667 1.667 0 0 0 0 3.333"
+                                                stroke="currentColor"
+                                                strokeWidth="1.5"
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                            />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
-
-            </div>
-        </section>
+            </section>
+        </>
     );
 }
+
+export default OrganizingCommittee;

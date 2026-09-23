@@ -70,7 +70,11 @@ export function Navbar() {
             }`}>
                 {/* Brand Logo */}
                 <a href="#home" className="flex items-center select-none shrink-0">
-                    <img src="/LOGO-removebg-preview (2).png" alt="ICT 2026 Logo" className="h-12 w-auto object-contain transition-all duration-500" />
+                    <img 
+                        src="/LOGO-removebg-preview (2).png" 
+                        alt="ICT 2026 Logo" 
+                        className="h-14 md:h-16 w-auto object-contain transition-all duration-300" 
+                    />
                 </a>
 
                 {/* Desktop Navigation Links */}
@@ -209,7 +213,11 @@ export function Navbar() {
                         {/* Drawer Header */}
                         <div className="flex items-center justify-between pb-4 border-b border-slate-100">
                             <div className="flex items-center">
-                                <img src="/LOGO-removebg-preview (2).png" alt="ICT 2026 Logo" className="h-12 w-auto" />
+                                <img 
+                                    src="/LOGO-removebg-preview (2).png" 
+                                    alt="ICT 2026 Logo" 
+                                    className="h-14 w-auto object-contain" 
+                                />
                             </div>
                             <button 
                                 onClick={() => setMobileOpen(false)} 

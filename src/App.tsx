@@ -1,5 +1,6 @@
 import { Navbar } from "./components/navbar";
 import { HeroSection } from "./sections/hero-sections";
+import { Sponsors } from "./sections/sponsors";
 import { Stats } from "./sections/stats";
 import { Gallery } from "./sections/gallery";
 import { WhyChooseUs } from "./sections/why-choose-us";
@@ -25,6 +26,7 @@ function App() {
       <LenisScroll />
       <Navbar />
       <HeroSection />
+      <Sponsors />
       <Stats />
       <SpeakersSection />
       <OrganizingCommittee />
