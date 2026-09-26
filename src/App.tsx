@@ -7,6 +7,8 @@ import { WhyChooseUs } from "./sections/why-choose-us";
 import { CallToAction } from "./sections/call-to-action";
 import { SpeakersSection } from "./sections/speakers";
 import { OrganizingCommittee } from "./sections/committee";
+import { Program } from "./sections/program";
+import { Registration } from "./sections/registration";
 import { Contact } from "./sections/contact";
 import { Footer } from "./components/footer";
 import LenisScroll from "./components/lenis-scroll";
@@ -31,6 +33,8 @@ function App() {
       <SpeakersSection />
       <OrganizingCommittee />
       <Gallery />
+      <Program />
+      <Registration />
       <WhyChooseUs />
       <CallToAction />
       <Contact />

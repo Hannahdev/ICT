@@ -5,27 +5,27 @@ import { Plus, Minus, HelpCircle, FileText, Globe2, Layers } from "lucide-react"
 // Mock data array replacing real estate accordion items with conference FAQs
 const conferenceFaqData = [
     {
-        icon: <HelpCircle className="size-5 text-emerald-600" />,
+        icon: <HelpCircle className="size-5 text-[#00A3E0]" />,
         title: "Conference Scope & Core Themes",
         description: "ICT 2027 brings together leading researchers, IEEE fellows, and urban tech leaders to explore 6G communications, AI-native networks, edge computing, and smart city infrastructure in Casablanca.",
         image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?q=80&w=1200&auto=format&fit=crop"
     },
     {
-        icon: <FileText className="size-5 text-emerald-600" />,
+        icon: <FileText className="size-5 text-[#00A3E0]" />,
         title: "Paper Submissions & EDAS Guidelines",
         description: "All submitted papers must adhere to standard IEEE double-column templates (up to 6 pages). All accepted and presented papers will be submitted for inclusion in IEEE Xplore.",
         image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=1200&auto=format&fit=crop"
     },
     {
-        icon: <Globe2 className="size-5 text-emerald-600" />,
+        icon: <Globe2 className="size-5 text-[#00A3E0]" />,
         title: "Venue & Host City: Casablanca",
         description: "Hosted in Casablanca, Morocco's financial and technological capital, the conference features keynote sessions, workshops, and direct interactions with municipal smart city leaders.",
         image: "https://images.unsplash.com/photo-1577147443647-81856d5151af?q=80&w=1200&auto=format&fit=crop"
     },
     {
-        icon: <Layers className="size-5 text-emerald-600" />,
-        title: "8 Specialized Research Tracks",
-        description: "Covering 5G/6G systems, smart mobility, federated learning, green ICT, cybersecurity, IoT architectures, and quantum networking.",
+        icon: <Layers className="size-5 text-[#00A3E0]" />,
+        title: "9 Specialized Core Research Tracks",
+        description: "Covering AI-native telecom, digital twins, 6G & spectrum, semantic ISAC, edge AI, cybersecurity, green communications, V2X mobility, and sustainable smart cities.",
         image: "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop"
     }
 ];
@@ -39,19 +39,19 @@ export function WhyChooseUs() {
                 
                 {/* Left Column */}
                 <div className="flex flex-col">
-                    <motion.div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 border border-emerald-200/80 rounded-full w-fit" 
+                    <motion.div className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#00A3E0]/10 border border-[#00A3E0]/20 rounded-full w-fit" 
                         initial={{ y: -20, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
                     >
-                        <HelpCircle size={14} className="text-emerald-600" />
-                        <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                        <HelpCircle size={14} className="text-[#00A3E0]" />
+                        <span className="text-xs font-bold text-[#0B2545] uppercase tracking-wider">
                             CONFERENCE FAQ & GUIDELINES
                         </span>
                     </motion.div>
                     
-                    <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-950 mt-4 leading-[1.15] tracking-tight"
+                    <motion.h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0B2545] mt-4 leading-[1.15] tracking-tight"
                         initial={{ y: 50, opacity: 0 }}
                         whileInView={{ y: 0, opacity: 1 }}
                         viewport={{ once: true }}
@@ -82,7 +82,7 @@ export function WhyChooseUs() {
                                         </div>
                                         <div>
                                             {isOpen ? (
-                                                <Minus className="size-4 text-emerald-600" />
+                                                <Minus className="size-4 text-[#00A3E0]" />
                                             ) : (
                                                 <Plus className="size-4 text-slate-500" />
                                             )}

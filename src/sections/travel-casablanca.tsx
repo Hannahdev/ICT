@@ -81,22 +81,22 @@ const placesToVisit: Place[] = [
 
 const travelTips = [
     {
-        icon: <Plane className="size-5 text-emerald-600" />,
+        icon: <Plane className="size-5 text-[#00A3E0]" />,
         title: "Airport & Arrival (CMN)",
         details: "Mohammed V International Airport (CMN) is located 30km south of the city, connected directly to downtown via the Al Bidaoui train in just 35 minutes."
     },
     {
-        icon: <Train className="size-5 text-emerald-600" />,
+        icon: <Train className="size-5 text-[#00A3E0]" />,
         title: "City Transit & Trams",
         details: "Modern, air-conditioned Tramway lines (T1–T4) and red 'Petit Taxis' offer safe, affordable, and seamless connection to conference venues and hotels."
     },
     {
-        icon: <FileCheck className="size-5 text-emerald-600" />,
+        icon: <FileCheck className="size-5 text-[#00A3E0]" />,
         title: "Visa & Invitation Letter",
-        details: "Many international nationalities enjoy visa-free or Moroccan eVisa entry. Registered ICT 2026 attendees can request official IEEE invitation letters."
+        details: "Many international nationalities enjoy visa-free or Moroccan eVisa entry. Registered ICT 2027 attendees can request official IEEE invitation letters."
     },
     {
-        icon: <Sun className="size-5 text-emerald-600" />,
+        icon: <Sun className="size-5 text-[#00A3E0]" />,
         title: "Weather & Hospitality",
         details: "Casablanca enjoys a sunny Atlantic climate (18°C–25°C). Experience legendary Moroccan hospitality, rich gastronomy, and multilingual accessibility."
     }
@@ -109,8 +109,8 @@ export function TravelCasablanca() {
         <section id="travel" className="py-20 md:py-28 px-4 md:px-16 lg:px-24 xl:px-32 w-full bg-slate-50 border-t border-slate-200/80 relative overflow-hidden">
             
             {/* Ambient Background Accents */}
-            <div className="absolute top-1/4 right-0 w-96 h-96 bg-emerald-100/60 blur-[140px] rounded-full pointer-events-none" />
-            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-teal-100/50 blur-[140px] rounded-full pointer-events-none" />
+            <div className="absolute top-1/4 right-0 w-96 h-96 bg-[#00A3E0]/15 blur-[140px] rounded-full pointer-events-none" />
+            <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-blue-100/50 blur-[140px] rounded-full pointer-events-none" />
 
             <div className="max-w-7xl mx-auto flex flex-col relative z-10">
                 
@@ -118,14 +118,14 @@ export function TravelCasablanca() {
                 <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                     <div className="flex flex-col items-start max-w-2xl">
                         <motion.div 
-                            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-emerald-50 border border-emerald-200/80 rounded-full"
+                            className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-[#00A3E0]/10 border border-[#00A3E0]/30 rounded-full"
                             initial={{ y: -20, opacity: 0 }}
                             whileInView={{ y: 0, opacity: 1 }}
                             viewport={{ once: true }}
                             transition={{ delay: 0.1, type: "spring", stiffness: 320, damping: 70 }}
                         >
-                            <Compass size={14} className="text-emerald-600" />
-                            <span className="text-xs font-bold text-emerald-800 uppercase tracking-wider">
+                            <Compass size={14} className="text-[#00A3E0]" />
+                            <span className="text-xs font-bold text-[#0B2545] uppercase tracking-wider">
                                 Host City & Travel Guide
                             </span>
                         </motion.div>
@@ -157,7 +157,7 @@ export function TravelCasablanca() {
                             onClick={() => setActiveTab("places")}
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                                 activeTab === "places" 
-                                    ? "bg-white text-emerald-700 shadow-sm" 
+                                    ? "bg-white text-[#0B2545] shadow-sm" 
                                     : "text-slate-600 hover:text-slate-900"
                             }`}
                         >
@@ -169,7 +169,7 @@ export function TravelCasablanca() {
                             onClick={() => setActiveTab("tips")}
                             className={`flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                                 activeTab === "tips" 
-                                    ? "bg-white text-emerald-700 shadow-sm" 
+                                    ? "bg-white text-[#0B2545] shadow-sm" 
                                     : "text-slate-600 hover:text-slate-900"
                             }`}
                         >
@@ -194,7 +194,7 @@ export function TravelCasablanca() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: idx * 0.1, duration: 0.4 }}
-                                className="group flex flex-col bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:border-emerald-500/40 transition-all duration-300"
+                                className="group flex flex-col bg-white rounded-2xl border border-slate-200/90 overflow-hidden shadow-sm hover:shadow-xl hover:border-[#00A3E0]/40 transition-all duration-300"
                             >
                                 {/* Place Photo */}
                                 <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
@@ -209,7 +209,7 @@ export function TravelCasablanca() {
                                         {place.category}
                                     </span>
 
-                                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide bg-emerald-600/95 text-white backdrop-blur-md shadow-sm">
+                                    <span className="absolute bottom-3 left-3 px-2.5 py-1 rounded-lg text-[11px] font-bold tracking-wide bg-[#00A3E0]/95 text-white backdrop-blur-md shadow-sm">
                                         {place.tag}
                                     </span>
                                 </div>
@@ -217,7 +217,7 @@ export function TravelCasablanca() {
                                 {/* Place Details */}
                                 <div className="p-6 flex flex-col flex-1 justify-between gap-4">
                                     <div>
-                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-emerald-700 transition-colors">
+                                        <h3 className="text-lg font-bold text-slate-900 group-hover:text-[#00A3E0] transition-colors">
                                             {place.name}
                                         </h3>
                                         <p className="text-xs sm:text-sm text-slate-600 leading-relaxed mt-2 font-normal">
@@ -226,8 +226,8 @@ export function TravelCasablanca() {
                                     </div>
 
                                     <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-                                        <div className="flex items-center gap-1.5 text-emerald-700 font-medium">
-                                            <MapPin className="size-3.5 text-emerald-600" />
+                                        <div className="flex items-center gap-1.5 text-[#00A3E0] font-medium">
+                                            <MapPin className="size-3.5 text-[#00A3E0]" />
                                             <span className="truncate">{place.highlight}</span>
                                         </div>
                                     </div>
@@ -250,7 +250,7 @@ export function TravelCasablanca() {
                                 key={idx}
                                 className="bg-white rounded-2xl p-6 md:p-8 border border-slate-200/90 shadow-sm hover:shadow-md transition-shadow flex items-start gap-5"
                             >
-                                <div className="size-12 rounded-2xl bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0">
+                                <div className="size-12 rounded-2xl bg-[#00A3E0]/10 border border-[#00A3E0]/20 flex items-center justify-center shrink-0">
                                     {tip.icon}
                                 </div>
                                 <div className="flex flex-col">
@@ -268,15 +268,15 @@ export function TravelCasablanca() {
 
                 {/* Conference Venue Info Callout */}
                 <motion.div 
-                    className="mt-14 rounded-3xl bg-slate-900 text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
+                    className="mt-14 rounded-3xl bg-[#0B2545] text-white p-6 sm:p-8 md:p-10 relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-8"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                 >
-                    <div className="absolute inset-0 bg-gradient-to-r from-emerald-950/80 via-slate-900 to-slate-900 pointer-events-none -z-0" />
+                    <div className="absolute inset-0 bg-gradient-to-r from-[#0B2545] via-[#07182C] to-[#0B2545] pointer-events-none -z-0" />
                     
                     <div className="relative z-10 flex flex-col max-w-xl">
-                        <span className="text-xs font-bold text-emerald-400 tracking-wider uppercase mb-1">
+                        <span className="text-xs font-bold text-[#00E5FF] tracking-wider uppercase mb-1">
                             Official Conference Venue
                         </span>
                         <h3 className="text-2xl sm:text-3xl font-bold tracking-tight">
@@ -287,15 +287,24 @@ export function TravelCasablanca() {
                         </p>
                     </div>
 
-                    <div className="relative z-10 flex items-center gap-4">
+                    <div className="relative z-10 flex flex-wrap items-center gap-3">
+                        <a 
+                            href="https://visitcasablanca.ma/pois/eglise-sacre-coeur/" 
+                            target="_blank" 
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 px-5 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-white text-[#0B2545] hover:bg-slate-100 transition-colors duration-200 shadow-md"
+                        >
+                            <span>Venue Guide (VisitCasablanca)</span>
+                            <ExternalLink size={14} />
+                        </a>
                         <a 
                             href="https://maps.google.com/?q=Sacré-Cœur+Casablanca+Boulevard+de+la+Résistance+20100" 
                             target="_blank" 
                             rel="noopener noreferrer"
-                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-emerald-600 hover:bg-emerald-500 text-white transition-colors duration-200 shadow-lg shadow-emerald-600/30"
+                            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full text-xs sm:text-sm font-semibold bg-[#00A3E0] hover:bg-[#008ec2] text-white transition-colors duration-200 shadow-lg shadow-[#00A3E0]/30"
                         >
-                            <span>Open in Google Maps</span>
-                            <ExternalLink size={15} />
+                            <span>Google Maps</span>
+                            <ExternalLink size={14} />
                         </a>
                     </div>
                 </motion.div>

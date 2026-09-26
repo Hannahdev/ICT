@@ -6,15 +6,17 @@ interface SponsorLogo {
 
 // Add or replace with your local logo files inside the public/ folder (e.g. "/sponsors/ieee.png" or "/logo.png")
 const sponsorLogos: SponsorLogo[] = [
-    { name: "Sponsor 1", src: "/LOGO-removebg-preview (2).png" },
+    { name: "Sponsor 1", src: "/WhatsApp_Image_2026-09-25_at_18.07.36-removebg-preview.png" },
     { name: "Sponsor 2", src: "/logo-fsbVF1.png" },
     { name: "Sponsor 3", src: "https://www.univh2c.ma/sites/default/files/Logo_UHIIC_0.png" },
     { name: "Sponsor 4", src: "https://images.seeklogo.com/logo-png/31/3/universite-hassan-1er-settat-logo-png_seeklogo-315574.png" },
-    { name: "Sponsor 5", src: "https://images.seeklogo.com/logo-png/53/3/fsac-fr-logo-png_seeklogo-531875.png", scale: "scale-135" },
+    { name: "Sponsor 5", src: "https://paafrica.org/images/UM6P_Logo-600.jpg" },
+     { name: "Sponsor 6", src: "https://casaevents.ma/wp-content/uploads/2020/04/unnamed-1-300x300.png" },
+    { name: "Sponsor 7", src: "https://images.seeklogo.com/logo-png/53/3/fsac-fr-logo-png_seeklogo-531875.png", scale: "scale-135" },
 ];
 
 export function Sponsors() {
-    return (
+    return (    
         <>
             <style>{`
                 .marquee-inner {

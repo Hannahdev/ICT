@@ -26,15 +26,31 @@ export function Footer() {
                         <div className="flex flex-col gap-5">
                             <span className="text-white text-sm font-bold tracking-wider">Program</span>
                             <div className="flex flex-col gap-3 text-xs text-zinc-300">
-                                <motion.a href="#" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="#tracks" className="hover:text-[#00A3E0] transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
                                 >
-                                    Tracks & Topics
+                                    9 Research Tracks
                                 </motion.a>
-                                <motion.a href="#speakers" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="#important-dates" className="hover:text-[#00A3E0] transition-colors duration-200" 
+                                    initial={{ y: 50, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
+                                >
+                                    Important Dates
+                                </motion.a>
+                                <motion.a href="#program" className="hover:text-[#00A3E0] transition-colors duration-200" 
+                                    initial={{ y: 50, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
+                                >
+                                    Program at a Glance
+                                </motion.a>
+                                <motion.a href="#speakers" className="hover:text-[#00A3E0] transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}
@@ -42,7 +58,7 @@ export function Footer() {
                                 >
                                     Keynote Speakers
                                 </motion.a>
-                                <motion.a href="#committee" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="#committee" className="hover:text-[#00A3E0] transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}
@@ -50,37 +66,13 @@ export function Footer() {
                                 >
                                     Organizing Committee
                                 </motion.a>
-                                <motion.a href="#" className="hover:text-white transition-colors duration-200" 
-                                    initial={{ y: 50, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
-                                >
-                                    Workshops
-                                </motion.a>
-                                <motion.a href="/venue" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="/venue" className="hover:text-[#00A3E0] transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}
                                     transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
                                 >
                                     Venue & Travel (Casablanca)
-                                </motion.a>
-                                <motion.a href="#" className="hover:text-white transition-colors duration-200" 
-                                    initial={{ y: 50, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
-                                >
-                                    Schedule & Agenda
-                                </motion.a>
-                                <motion.a href="#" className="hover:text-white transition-colors duration-200" 
-                                    initial={{ y: 50, opacity: 0 }}
-                                    whileInView={{ y: 0, opacity: 1 }}
-                                    viewport={{ once: true }}
-                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
-                                >
-                                    Proceedings
                                 </motion.a>
                             </div>
                         </div>
@@ -128,7 +120,15 @@ export function Footer() {
                         <div className="flex flex-col gap-5">
                             <span className="text-white text-sm font-bold tracking-wider">Authors & Calls</span>
                             <div className="flex flex-col gap-3 text-xs text-zinc-300">
-                                <motion.a href="#about" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="#registration" className="hover:text-[#00A3E0] transition-colors duration-200 font-semibold text-white" 
+                                    initial={{ y: 50, opacity: 0 }}
+                                    whileInView={{ y: 0, opacity: 1 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.2, type: "spring", stiffness: 320, damping: 70, mass: 1 }}
+                                >
+                                    Registration & Packages (€300 / €50)
+                                </motion.a>
+                                <motion.a href="#call-for-papers" className="hover:text-white transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}
@@ -136,7 +136,7 @@ export function Footer() {
                                 >
                                     Call for Papers
                                 </motion.a>
-                                <motion.a href="#about" className="hover:text-white transition-colors duration-200" 
+                                <motion.a href="#call-for-papers" className="hover:text-white transition-colors duration-200" 
                                     initial={{ y: 50, opacity: 0 }}
                                     whileInView={{ y: 0, opacity: 1 }}
                                     viewport={{ once: true }}

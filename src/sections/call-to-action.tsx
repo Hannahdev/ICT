@@ -5,11 +5,11 @@ export function CallToAction() {
   return (
     <section className="relative py-24 md:py-32 px-4 sm:px-6 lg:px-8 w-full flex flex-col items-center justify-center text-center overflow-hidden">
       {/* Background Ambient Glow & Grid Pattern */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-500/15 via-transparent to-transparent pointer-events-none -z-10" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[#00A3E0]/15 via-transparent to-transparent pointer-events-none -z-10" />
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px] pointer-events-none -z-10" />
 
       {/* Main Glassmorphic Container Card */}
-      <div className="w-full max-w-5xl mx-auto rounded-3xl bg-white/60 backdrop-blur-xl border border-slate-200/80 p-8 sm:p-12 md:p-16 shadow-2xl shadow-emerald-500/5 relative z-10 flex flex-col items-center">
+      <div className="w-full max-w-5xl mx-auto rounded-3xl bg-white/60 backdrop-blur-xl border border-slate-200/80 p-8 sm:p-12 md:p-16 shadow-2xl shadow-blue-500/5 relative z-10 flex flex-col items-center">
         
         {/* Gallery Image Stack with Floating Hover FX */}
         <motion.div 
@@ -55,26 +55,15 @@ export function CallToAction() {
           />
         </motion.div>
 
-        {/* Floating Conference Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 15 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4 }}
-          className="mb-4"
-        >
-      
-        </motion.div>
-
         {/* Heading */}
         <motion.h2 
-          className="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-950 tracking-tight max-w-2xl mb-4 leading-[1.15]"
+          className="text-3xl sm:text-4xl md:text-5xl font-bold text-[#0B2545] tracking-tight max-w-2xl mb-4 leading-[1.15]"
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          Shape the Future of <span className="bg-gradient-to-r from-emerald-600 to-teal-600 bg-clip-text text-transparent">Technology & Innovation</span>
+          Shape the Future of <span className="bg-gradient-to-r from-[#00A3E0] via-cyan-600 to-[#0B2545] bg-clip-text text-transparent">Telecom & Smart Cities</span>
         </motion.h2>
 
         {/* Subtitle */}
@@ -85,10 +74,10 @@ export function CallToAction() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          Join visionary researchers, student innovators, and industry leaders. Register now to present your project or reserve your seat.
+          Join visionary researchers, student innovators, and industry leaders in Casablanca. Submit your research or explore the full program.
         </motion.p>
 
-        {/* Green Action Buttons */}
+        {/* Blue Action Buttons */}
         <motion.div
           className="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto"
           initial={{ y: 20, opacity: 0 }}
@@ -96,14 +85,22 @@ export function CallToAction() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-semibold text-sm sm:text-base shadow-lg shadow-emerald-600/25 hover:shadow-emerald-600/35 transition-all duration-200 flex items-center justify-center gap-2 group active:scale-98 cursor-pointer">
-            <span>Register for Conference</span>
+          <a 
+            href="https://edas.info"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#00A3E0] hover:bg-[#0077C8] text-white font-semibold text-sm sm:text-base shadow-lg shadow-[#00A3E0]/25 transition-all duration-200 flex items-center justify-center gap-2 group active:scale-98 cursor-pointer"
+          >
+            <span>Submit via EDAS</span>
             <MoveRight className="w-4 h-4 transition-transform duration-200 group-hover:translate-x-1" />
-          </button>
+          </a>
 
-          <button className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-emerald-50 hover:bg-emerald-100/80 text-emerald-800 font-semibold text-sm sm:text-base border border-emerald-200/80 transition-all duration-200 flex items-center justify-center gap-2 active:scale-98 cursor-pointer">
-            <span>View Schedule</span>
-          </button>
+          <a 
+            href="#program"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#00A3E0]/10 hover:bg-[#00A3E0]/20 text-[#0B2545] font-semibold text-sm sm:text-base border border-[#00A3E0]/30 transition-all duration-200 flex items-center justify-center gap-2 active:scale-98 cursor-pointer"
+          >
+            <span>View Program Schedule</span>
+          </a>
         </motion.div>
 
       </div>
