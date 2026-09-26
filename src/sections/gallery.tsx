@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useRef, useEffect } from "react";
+import { useRef } from "react";
 
 interface TrackItem {
     id: number;

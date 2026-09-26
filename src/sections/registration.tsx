@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle2, FileCheck, Users, CreditCard, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
+import { CheckCircle2, CreditCard, Sparkles, ArrowRight, ShieldCheck } from "lucide-react";
 
 interface PricingTier {
     title: string;

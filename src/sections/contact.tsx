@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Mail, MapPin, Building2, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
+import { Mail, MapPin, CheckCircle2, AlertCircle, Loader2 } from "lucide-react";
 
 export function Contact() {
     const [loading, setLoading] = useState(false);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Calendar, Clock, MapPin, Sparkles, Coffee, Utensils, Users, Award, BookOpen, Globe2, ChevronRight } from "lucide-react";
+import { Calendar, Clock, Sparkles, Coffee, Utensils, Award, BookOpen } from "lucide-react";
 
 interface ScheduleSlot {
     time: string;
